@@ -1,0 +1,5 @@
+numpy
+tkinter
+opencv-python
+audio2numpy
+sounddevice
