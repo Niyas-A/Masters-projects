@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find april_detection)/launch/april_detection_cam_main.launch" />
+  <node pkg="tf" type="static_transform_publisher" name="marker7_trans" args="1.005 0 0 0.5 -0.5 0.5 -0.5 map marker_7 100" />
+  <node pkg="tf" type="static_transform_publisher" name="marker6_trans" args="1.005 0.475 0 0.5 -0.5 0.5 -0.5 map marker_6 100" />
+  <node pkg="tf" type="static_transform_publisher" name="marker5_trans" args="0.57 0.77 0 -0.707 0 0 0.707 map marker_5 100" />
+  <node pkg="tf" type="static_transform_publisher" name="marker4_trans" args="0.0 0.77 0 -0.707 0 0 0.707 map marker_4 100" />
+  <node pkg="tf" type="static_transform_publisher" name="marker2_trans" args="0.475 -0.33 0 0 -0.707 0.707 0 map marker_2 100" />
+  <node pkg="tf" type="static_transform_publisher" name="marker3_trans" args="0.0 -0.33 0 0 -0.707 0.707 0 map marker_3 100" />
+</launch>
