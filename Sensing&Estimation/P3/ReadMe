@@ -1,0 +1,14 @@
+Please follow steps for running the code:
+All codes are present inside the code folder and all results are present inside the Final Output folder
+1. part 1 - EKF predict pose:
+command to run the code:
+    python part1.py
+Changing Dataset = 10/03 in code line 5
+2. part 2 - EKF update landmark:
+command to run the code:
+    python part2.py
+Changing Dataset = 10/03 in code line 5
+3. part 1 - EKF SLAM:
+command to run the code:
+    python part3.py
+Changing Dataset = 10/03 in code line 5

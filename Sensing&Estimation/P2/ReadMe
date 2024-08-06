@@ -1,0 +1,49 @@
+Please follow steps for running the code:
+All codes are present inside the code folder and all results are present inside the Final Output folder
+1. Encoder and IMU odometry
+command to run the code:
+    python Encoder_IMU_odometry.py
+Changing Dataset = 20/21 in code line 4
+2. Point-cloud registration via iterative closest point (ICP):
+    a. Warm-up:
+     command to run the code: Will output all results one by one for both objects
+        python ICP_warmUp.py
+    b. Scan matching:
+     command to run the code:
+        python scan_matching.py
+     Changing Dataset = 20/21 in code line 5
+3. Occupancy and texture mapping:
+    a. Occupancy mapping:
+        command to run the code for IMU odometry based occupancy mapping:
+            python Occupancy_mapping_IMU.py
+        Changing Dataset = 20/21 in code line 5
+        command to run the code for Lidar ICP odometry based occupancy mapping:
+            python Occupancy_mapping_ICP.py
+        Changing Dataset = 20/21 in code line 7
+        command to run the code for GTSAM odometry based occupancy mapping:
+            python Occupancy_mapping_GTSAM.py
+        Changing Dataset = 20/21 in code line 8
+    b. Texture mapping:
+        command to run the code for IMU odometry based texture mapping:
+            python Texture_mapping_IMU.py
+        Changing Dataset = 20/21 in code line 5
+        command to run the code for Lidar ICP odometry based texture mapping:
+            python Texture_mapping_ICP.py
+        Changing Dataset = 20/21 in code line 7
+        command to run the code for GTSAM odometry based texture mapping:
+            python Texture_mapping_GTSAM.py
+        Changing Dataset = 20/21 in code line 8
+4. Pose graph optimization and loop closure:
+    a. Factor graph in GTSAM: visible inside GTSAM_factor_graph.py
+    b. Loop closure detection:
+        i  Fixed-interval loop closure:
+            command to run the code for get GTSAM fixed interval loop odometry:
+                python GTSAM_factor_graph.py
+            Changing Dataset = 20/21 in code line 7
+            Changing loop closure interval = 20/21 in code line 111
+        ii  Fixed-interval and end loop closure:
+            command to run the code for get GTSAM fixed interval and end loop odometry:
+                python GTSAM_loop_closure.py
+            Changing Dataset = 20/21 in code line 7
+            Changing loop closure interval = 20/21 in code line 111
+    c. Applying the optimized trajectory: visible inside GTSAM_factor_graph.py
